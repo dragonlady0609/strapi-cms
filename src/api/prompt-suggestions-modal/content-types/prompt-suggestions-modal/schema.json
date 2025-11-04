@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prompt_suggestions_modals",
+  "info": {
+    "singularName": "prompt-suggestions-modal",
+    "pluralName": "prompt-suggestions-modals",
+    "displayName": "PromptSuggestionsModal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "enum": [
+        "CHAT_GENERAL",
+        "JOB_DETAILS"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "currentStatePrefix": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "modal"
+    }
+  }
+}
