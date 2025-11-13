@@ -625,6 +625,12 @@ export interface ApiPromptPrompt extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    entryName: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     formatting: Schema.Attribute.JSON &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
